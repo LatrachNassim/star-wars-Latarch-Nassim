@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars GL.js</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        
+        }
+        #score
+        {
+            position: absolute;
+            left: 5px;
+            top: 50px;
+            width: 50px;
+            height: 30px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="score">99</div>
+    <script>const score_div = document.getElementById("score");
+        score_div.innerText = 0;
+    </script>
+
+
+    <script src="workshop/star_wars_GL/stats.min.js"></script>
+    <script src="workshop/star_wars_GL/three.min.js"></script>
+    <script src="workshop/star_wars_GL/OBJLoader.js"></script>
+    <script src="workshop/star_wars_GL/MTLLoader.js"></script>
+	<script src="workshop/star_wars_GL/city.js"></script>
+    <script src="workshop/star_wars_GL/engine.js"></script>
+    <script src="workshop/star_wars_GL/star_play.js"></script>
+    
+
+    <script>
+        city.start({
+            debug_mode: true,
+            high_performance: false,
+            engine: {
+                camera_fov: 50,
+                far_plan: 2500
+            },
+            star_play: {
+                nb_building: 10,
+                speed: 6
+            }
+        });
+    </script>
+</body>
